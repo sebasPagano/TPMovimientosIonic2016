@@ -3,8 +3,8 @@ angular.module('starter.controllers', ['ngCordova'])
 .controller('DashCtrl', function($scope,$timeout,$http,$state) {
 
 
-$scope.miBoton = false;
- var messagesRef = new Firebase('https://tptrivia.firebaseio.com/usuarios');
+ $scope.miBoton = false;
+ var messagesRef = new Firebase('https://tppiano-c5592.firebaseio.com/usuarios');
 
 
   $scope.enviarUsuario = function()
