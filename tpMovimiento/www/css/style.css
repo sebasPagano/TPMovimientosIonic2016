@@ -2,20 +2,13 @@
 
 .padding
 {
-    background-image:url(../img/campo.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-
-}
-.paddingFondo
-{
     background-image:url(../img/Fondo.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 
 }
+
 
 .avatar {
     float: left;
@@ -40,5 +33,22 @@
 .imagenPosicionada{
   position: absolute;
   top:  200px; 
-  left: 0px;
+  left: 120px;
+
+ 
+}
+.imagenPosicionada1{
+  position: absolute;
+  left: -110px;
+
+ 
+}
+.imagenPosicionada2{
+  position: absolute;
+  left: 120px;
+
+ 
+}
+.Letra2 {
+  font-family: "Homer Simpson", cursive;
 }

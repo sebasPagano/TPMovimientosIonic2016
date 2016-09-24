@@ -20,6 +20,21 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    if(window.plugins && window.plugins.NativeAudio)
+    { 
+
+
+      $cordovaNativeAudio.preloadComplex('ayCaramba', 'audio/ayCaramba.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Eructo', 'audio/Eructo.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Nelson', 'audio/Nelson.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Burns', 'audio/Burns.mp3', 1, 1);
+      $cordovaNativeAudio.preloadComplex('Doh', 'audio/Doh.wav', 1, 1);
+      $cordovaNativeAudio.preloadComplex('RisaHomero', 'audio/RisaHomero.mp3', 1, 1);
+
+
+
+
+    }
 
   });
 })
@@ -41,38 +56,38 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.router'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.inicio', {
+    url: '/inicio',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-inicio': {
+        templateUrl: 'templates/tab-inicio.html',
+        controller: 'InicioCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.juego', {
+      url: '/juego',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-juego': {
+          templateUrl: 'templates/tab-juego.html',
+          controller: 'JuegoCtrl'
         }
       }
     })
 
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.autor', {
+    url: '/autor',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-autor': {
+        templateUrl: 'templates/tab-autor.html',
+        controller: 'AutorCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/inicio');
 
 });
